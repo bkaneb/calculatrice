@@ -38,23 +38,39 @@
 
 }
 .aff{
-    margin-bottom: 3.125rem;
     margin-top: 0.625rem;
+    margin-bottom: 3.75rem;
     height: 5rem;
     width: 100%;
     display:flex;
     justify-content: center;
     background-color: #B2B8CC ;
 }
+#inputaff{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: xx-large;
+    text-align: right;
+}
 .calculette{
     margin: 3.125rem;
     border: 10px solid gray;
     width: 34.375rem;
-    height: 29rem;
+    height: 35rem;
     background-color: gray ;
 }
-
-#inputaff{
+.history{
+    margin-top: 0.625rem;
+    margin-bottom: 0.5rem;
+    height: 4.5rem;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    background-color: #B2B8CC ;
+}
+#historyaff{
     background-color: transparent;
     height: 100%;
     width: 100%;
