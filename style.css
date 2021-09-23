@@ -1,4 +1,4 @@
-.listGrid{
+.listGridNumbers{
     background-color: transparent;
     display: grid;
     color: black;
@@ -6,10 +6,22 @@
     grid-template-rows: auto auto auto;
     height: 320px;
 }
+.colorNumbers{
+    background: #2E2F31  ;
+    color: white;
+    
+}
+.colorOperator{
+    background: #4A4A4C  ;
+    color: white;
+}
+.coloregale{
+    background: #213477 ;
+    color: white;
+}
 .numbers{
     border: 1px white solid;
     margin: 1px;
-    background-color: lightgrey;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -17,30 +29,7 @@
 .numbers:hover{
     background-color: grey;
 }
-
-.aff{
-    background-color: grey;
-    margin: 3.125rem;
-    height: 5rem;
-    width: 100% - 50px;
-    display:flex;
-    justify-content: center;
-    border: 1px solid black;
-}
-.calculette{
-    margin: 3.125rem;
-    border: 10px solid gray;
-    width: 550px;
-    height: 500px;
-    background-color: grey;
-}
 .zero{
-    border: 1px white solid;
-    margin: 1px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: lightgray;
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -48,6 +37,23 @@
     background-color: grey;
 
 }
+.aff{
+    margin-bottom: 3.125rem;
+    margin-top: 0.625rem;
+    height: 5rem;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    background-color: #B2B8CC ;
+}
+.calculette{
+    margin: 3.125rem;
+    border: 10px solid gray;
+    width: 34.375rem;
+    height: 29rem;
+    background-color: gray ;
+}
+
 #inputaff{
     background-color: transparent;
     height: 100%;
