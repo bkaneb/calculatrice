@@ -1,0 +1,58 @@
+.listGrid{
+    background-color: transparent;
+    display: grid;
+    color: black;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: 320px;
+}
+.numbers{
+    border: 1px white solid;
+    margin: 1px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.numbers:hover{
+    background-color: grey;
+}
+
+.aff{
+    background-color: grey;
+    margin: 3.125rem;
+    height: 5rem;
+    width: 100% - 50px;
+    display:flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+.calculette{
+    margin: 3.125rem;
+    border: 10px solid gray;
+    width: 550px;
+    height: 500px;
+    background-color: grey;
+}
+.zero{
+    border: 1px white solid;
+    margin: 1px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: lightgray;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.zero:hover{
+    background-color: grey;
+
+}
+#inputaff{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: xx-large;
+    text-align: right;
+}
