@@ -18,7 +18,7 @@ function soustraction(){
         rmzero++;
         saisie++;
     }
-    else if(saisie == 1){
+    else if(saisie == 1 && inputAff.value != ""){
         secondValue = parseFloat(inputAff.value);
         inputAff.value = secondValue;
         thirdvalue = parseFloat(historyAff.value) - secondValue;
@@ -43,7 +43,7 @@ function multiplication(){
         rmzero++;
         saisie++;
     }
-    else if(saisie == 1){
+    else if(saisie == 1 && inputAff.value != ""){
         secondValue = parseFloat(inputAff.value);
         inputAff.value = secondValue;
         thirdvalue = secondValue * parseFloat(historyAff.value);
@@ -68,7 +68,7 @@ function diviser(){
         rmzero++;
         saisie++;
     }
-    else if(saisie == 1){
+    else if(saisie == 1 && inputAff.value != ""){
         secondValue = parseFloat(inputAff.value);//enlever les string en les convertisant en int
         inputAff.value = secondValue;
         thirdvalue =  parseFloat(historyAff.value) / secondValue;
@@ -95,7 +95,7 @@ function addition(){
                 saisie++;
 
     }else
-    if(saisie == 1){//si ce n'est pas la premiere saisie dans inputaff
+    if(saisie == 1 && inputAff.value != ""){//si ce n'est pas la premiere saisie dans inputaff
         secondValue = parseFloat(inputAff.value);
         inputAff.value = secondValue;
         thirdvalue = secondValue + parseFloat(historyAff.value);//on prend la derniere valeur calculer plus celle dans lecran principale
@@ -119,19 +119,20 @@ function clearCalcul(operator)
     if(saisie == 1){
         if(caseEgale == "*" && inputAff.value != "" && operator !="*")
     {
-        historyAff.value = parseInt(historyAff.value) * parseInt(inputAff.value) + operator;   
+        
+        historyAff.value = parseFloat(historyAff.value) * parseFloat(inputAff.value) + operator;   
         inputAff.value = "";
     }else if(caseEgale == "/" && inputAff.value != "" && operator !="/")
     {
-        historyAff.value = parseInt(historyAff.value) / parseInt(inputAff.value) + operator;   
+        historyAff.value = parseFloat(historyAff.value) / parseFloat(inputAff.value) + operator;   
         inputAff.value = "";
     }else if(caseEgale == "-" && inputAff.value != "" && operator !="-")
     {
-        historyAff.value = parseInt(historyAff.value) - parseInt(inputAff.value) + operator;   
+        historyAff.value = parseFloat(historyAff.value) - parseFloat(inputAff.value) + operator;   
         inputAff.value = "";
     }else if(caseEgale == "+" && inputAff.value != "" && operator !="+")
     {
-        historyAff.value = parseInt(historyAff.value) * parseInt(inputAff.value) + operator;   
+        historyAff.value = parseFloat(historyAff.value) + parseFloat(inputAff.value) + operator;   
         inputAff.value = "";
     }
     } 
@@ -171,31 +172,28 @@ for(let i = 0; i<numbersAll.length; i++)/*tant que le i ne correspond pas a celu
     if(i == 3)// btn -
     {
         numbersAll[i].addEventListener("click", function(event){       
-           recupOperator = historyAff.value;//trasnmet la donner du input history
-            caseEgale = recupOperator.substr(-1);//lis le dernier caractere qui est l'operateur
-            if(caseEgale == "+" && inputAff.value != "")
-            {
-                historyAff.value = parseInt(inputAff.value) + parseInt(historyAff.value) + "-";   
-            }   
+            clearCalcul("-");
             soustraction();        
         })      
     }
     if(i==15)// btn +
     {
         numbersAll[i].addEventListener("click", function(event){
-            clearCalcul("+");
+                clearCalcul("+");
                 addition();
         })  
     }
     if(i==11)//btn *
     {
         numbersAll[i].addEventListener("click", function(event){
+            clearCalcul("*");
             multiplication();
     })  
     }
     if(i==7)//btn /
     {
         numbersAll[i].addEventListener("click", function(event){
+            clearCalcul("/");
             diviser();
     })  
     }
